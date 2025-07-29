@@ -91,3 +91,16 @@ const author = authors.sort((a, b) => {
     return areAuthorsAdults ? b.age - a.age : a.age - b.age;
 });
 console.log(author);
+
+// Creare un array (ages) che contiene le età degli autori dei libri.
+// Calcola la somma delle età (agesSum) usando reduce.
+// Stampa in console l’età media degli autori dei libri.
+
+const ages = authors.map(author => author.age);
+console.log(ages);
+
+const agesSum = ages.reduce((acc, age) => acc + age, 0 );
+console.log(agesSum);
+
+const averageAge = (agesSum / ages.length).toFixed(2);
+console.log(averageAge);
